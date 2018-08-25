@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  SyntaxError: C:\Users\Nandu\Antdsrikanth\antd-demo\package.json: Unexpected token y in JSON at position 211
+  SyntaxError: C:\Users\Nandu\Antdsrikanth\antd-demo\sample-tech\package.json: Unexpected string in JSON at position 245
       at JSON.parse (<anonymous>)
       at C:\Users\Nandu\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1130:59
       at Generator.next (<anonymous>)
@@ -29,7 +29,9 @@ npm manifest:
     "scripts": {
       "client": "cd client && yarn start",
       "server": "nodemon AppNode.js",
-      "dev": "concurrently --kill-others-on-fail /"yarn AppNode/" /"yarn client/""
+  	
+      "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+  	"heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
     },
     "dependencies": {
       "body-parser": "^1.18.3",
