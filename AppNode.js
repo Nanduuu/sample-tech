@@ -14,7 +14,7 @@ var urlencodedparser = bodyParser.urlencoded({extended:true});
 var port = process.env.PORT || 8080;
 
 var http= require('http');
-
+app.use(express.static('public/build'));
 app.use('/email/',routers);
 app.use(bodyParser.json());
 //app.use(urlencodedparser);
@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 
 /*
 if (process.env.NODE_ENV === 'production') {
-  // Serve any static files
+  // Serve any static filess
   app.use(express.static(path.join(__dirname, 'client/build')));
   // Handle React routing, return all requests to React app
   app.get('*', function(req, res) {
