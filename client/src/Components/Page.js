@@ -15,7 +15,7 @@ class Page extends React.Component{
 	render(){
 
 		return(
-					<div>
+					<div style={{margin:"1%"}}>
 
 						<Card hoverable="true" 
 						    title={this.props.header}

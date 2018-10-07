@@ -116,7 +116,8 @@ constructor(props){
 
   }
   disabledDate = (current)=>{
-			return current && current < moment().endOf('day');
+			return current+1 && current< moment().endOf('yesterday');
+			
 		}
 
 render(){
@@ -155,9 +156,9 @@ render(){
 					<Row >
 					<Col span={6}style={style}><lable> Time Zone </lable></Col>
 					<Col span={12} style={{background:"white"}}>
-						<lable style={{color:"black"}}><Input type="radio" onChange={this.timeChange} name="timezone" value="CST" checked/>CST</lable>
-						<lable style={{color:"black"}}><Input type="radio" onChange={this.timeChange} name="timezone" value="IST"/>IST</lable>
-						<lable style={{color:"black"}}><Input type="radio" onChange={this.timeChange} name="timezone" value="PST"/>PST</lable>
+						<lable style={{color:"black"}}><Input type="radio" onChange={this.timeChange} name="timezone" value="EST" checked/>*EST</lable>
+						<lable style={{color:"black"}}><Input type="radio" onChange={this.timeChange} name="timezone" value="PST"/>*PST</lable>
+						<lable style={{color:"black"}}><Input type="radio" onChange={this.timeChange} name="timezone" value="IST"/>*IST</lable>
 					</Col>
 
 					</Row>

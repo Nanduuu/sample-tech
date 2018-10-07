@@ -20,7 +20,7 @@ class Home extends React.Component{
                              <h1 style={{color:"white"}}> Are you looking for ??</h1>
                              <Row>
                              	<Col xl={12} sm={12} md={12}>
-                              	 <Link to = {"/SubmitForm"}><Button style={{ fontSize:"16px",width:'100%'}}><b>Tranning</b></Button> </Link>   
+                              	 <Link to = {"/SubmitForm"}><Button style={{ fontSize:"16px",width:'100%'}}><b>Training</b></Button> </Link>   
                                 </Col>
                              	<Col xl={12} sm={12} md={12}>
                                  <Link to = {"/SubmitForm"}><Button style={{fontSize:"16px",width:'100%'}}><b>Job Support</b></Button> </Link>  

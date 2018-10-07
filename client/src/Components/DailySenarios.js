@@ -44,7 +44,7 @@ class DailySenarious extends React.Component{
 					<div style={{margin:"2%",border:"1px solid blue",boxShadow:"1px  1px 20px blue"}}>
 					{this.state.items.map(function(data,index){
 
-						return <Page key={index} header={data.A} body={data.B }/>
+						return <Page  key={index} header={data.A} body={data.B }/>
 					})}
 					
 				

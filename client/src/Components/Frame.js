@@ -174,7 +174,7 @@ class Frame extends React.Component{
                   <Link to = {"/Optcpt"}>  <Button  type="primary" size='large' style={{ background:"#011456", width :"100%",margin: "0px"}}> CPT/OPT  FAQ </Button></Link>
                   </Col>
                   <Col xl={12} lg={12} sm={12} xs={12}>
-                  <Link to ={"/DailySenarios"}><Button type="primary" size='large' style={{ background:"#011456", width :"100%",margin: "0px"}}>Daily Senarios</Button></Link>                  </Col>
+                  <Link to ={"/DailySenarios"}><Button type="primary" size='large' style={{ background:"#011456", width :"100%",margin: "0px"}}>Daily Scenarios</Button></Link>                  </Col>
               </Row>
 
               <Row>
