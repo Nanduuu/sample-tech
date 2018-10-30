@@ -2,16 +2,16 @@ import React from 'react';
 import formurlencoded from 'form-urlencoded';
 import {Route , Switch , Redirect} from 'react-router';
 import { Link } from 'react-router-dom';
-//import { Drawer, Form, Button, Col, Row, Input, Select, Mention,DatePicker } from 'antd';
+import moment from 'moment';
 import { Drawer, Form, Button, Col, Row, Input, Select, Mention,DatePicker } from 'antd';
 const { Option } = Select;
 
 const style={
 	
 	textAlign:"right",
-	padding:'10px'
+	paddingRight:'10px',
+	margin:"auto"
 }
-
 
 class SubmitForm extends React.Component{
 
@@ -52,14 +52,15 @@ constructor(props){
 			this.setState ({Technology :e.target.value});
 
 		}
-		dateChange = (e)=>{
+		dateChange = (dates: moment, moment, dateStrings: string, string)=>{
 			
-			this.setState ({StartDate:e.target.value})
+			this.setState ({StartDate:moment})
+
 
 		}
 		timeChange = (e)=>{
 			
-			alert(e.target.value);
+			e.preventDefault();
 			this.setState ({Time :e.target.value})
 
 		}
@@ -69,7 +70,7 @@ constructor(props){
 
 		}
 
-
+		
 		handleSubmit =(event)=>{
 			event.preventDefault();
 
@@ -84,7 +85,7 @@ constructor(props){
 			}
 
 			
-			alert(this.state.Time);
+			
 			var packet={method : 'POST',
 						body:formurlencoded(data),
 						headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' }};
@@ -114,14 +115,18 @@ constructor(props){
     }
 
   }
-
+  disabledDate = (current)=>{
+			return current+1 && current< moment().endOf('yesterday');
+			
+		}
 
 render(){
 
+
 	return(
-			<div style={{margin:"5px"}}>
+			<div style={{margin:"5px", fontSize:"20px", color:"white"}}>
 			{this.redirect()}
-			<h2>Please enter the details</h2>
+			<h2 style={{color:"white"}}>Please enter the details</h2>
 			<form onSubmit = {this.handleSubmit}>
 					<Row >
 					<Col span={6} style={style}><lable > Name </lable></Col>
@@ -140,20 +145,20 @@ render(){
 
 					<Row>
 					<Col span={6}  style={style}><lable> Breif about requirement </lable></Col>
-					<Col span={12}><textarea style={{width:'100%',height:'50%'}} onChange={this.breifChange} required/></Col>
+					<Col span={12}><textarea style={{width:'100%',height:'50%',color:"black"}} onChange={this.breifChange} required/></Col>
 					</Row>
 
 					<Row >
 					<Col span={6} style={style} ><lable> Date on required </lable></Col>
-					<Col span={12}><Input type="date" onChange={this.dateChange} required/></Col>
+					<Col span={12}><DatePicker disabledDate={this.disabledDate} onChange={this.dateChange} style={{width:"100%"}} required/></Col>
 					</Row>
 
 					<Row >
 					<Col span={6}style={style}><lable> Time Zone </lable></Col>
 					<Col span={12} style={{background:"white"}}>
-						<lable><Input type="radio" onChange={this.timeChange} name="timezone" value="CST" checked/>CST</lable>
-						<lable><Input type="radio" onChange={this.timeChange} name="timezone" value="IST"/>IST</lable>
-						<lable><Input type="radio" onChange={this.timeChange} name="timezone" value="PST"/>PST</lable>
+						<lable style={{color:"black"}}><Input type="radio" onChange={this.timeChange} name="timezone" value="EST" checked/>*EST</lable>
+						<lable style={{color:"black"}}><Input type="radio" onChange={this.timeChange} name="timezone" value="PST"/>*PST</lable>
+						<lable style={{color:"black"}}><Input type="radio" onChange={this.timeChange} name="timezone" value="IST"/>*IST</lable>
 					</Col>
 
 					</Row>
@@ -166,10 +171,10 @@ render(){
 
 						<Col span={12}>
 						<Col span={12}>
-						<Input type="submit"/>
+						<Input type="submit"/> 
 						</Col>
 						<Col span={12}>
-						<Link to='/'><Button style={{width:'100%'}}>Cancel</Button></Link>
+						<Link to='/'><Button type="danger" style={{width:'100%'}}>Cancel</Button></Link>
 						</Col>
 						
 						
