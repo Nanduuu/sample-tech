@@ -9,8 +9,8 @@ class Contactus extends React.Component{
 
 	render(){
 		return(
-					<div style={{ margin:"0px 0px 30px 0px"}}>	
-							<div style={{height:'100px', margin:"20px 0px 0px 0px"}}>
+					<div style={{textAlign:"center",backgroundColor:"#001628"}}>	
+							<div style={{height:'100px', margin:"0px 0px 0px 0px"}}>
                              <h1 style={{ color: 'white' }}>Contact Information</h1>
                             </div>
                              

@@ -15,7 +15,7 @@ class Optcpt extends React.Component{
 	}
 	componentDidMount(){
 		
-		fetch("/optcpt/")
+		fetch("/api/optcpt/")
 		.then(res => res.json())
       	.then(
         	(res) => {

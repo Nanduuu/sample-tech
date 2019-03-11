@@ -1,0 +1,62 @@
+.mega:hover {
+  background-color: #f7f8f9;
+  cursor: pointer;
+  color: black;
+}
+
+.flex-container {
+	display: flex;
+	padding:0px 0px 10px 0px;
+	align-content: space-around;
+
+}
+
+.flex-container-input {
+	display: flex;
+	padding:0px 0px 10px 0px;
+	align-content: space-around;
+	align-items: stretch;
+
+
+}
+
+.flex-element-input1 {
+	flex: 3;
+	
+}
+
+.flex-element-input2 {
+	flex: 1;
+	
+}
+
+.flex-element1 {
+	flex: 1;
+	background-color: #001628;
+}
+
+.flex-element2 {
+	flex: 3;
+	margin: 0px;
+	padding: 10px;
+
+}
+
+.submit {
+	background-color: #001628;
+	border-bottom: 1px solid white;
+}
+
+.margin-clear {
+	margin: auto;
+}
+
+
+@media only screen and (max-width: 600px) {
+	.flex-element1{
+		display: none;
+		
+	}	
+
+}
+ 

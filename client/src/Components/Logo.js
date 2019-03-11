@@ -1,8 +1,9 @@
 import React from 'react';
-import {Row,Col} from 'antd';
+import { Jumbotron, Container } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
+import './logo.css';
+
 var image =require('./logo.jpg');
-
-
 
 class Logo extends React.Component{
 	constructor(props){
@@ -11,12 +12,16 @@ class Logo extends React.Component{
 
 	render(){
 		return(
-				<div style={{background:"#011456",width:"100%" }}>
-				<Row>
-					<Col xl={24} md={24} sm={24}>
-						<img style={{align:"left" ,width:"20%",height:"5%"}} src={image}></img>
-				<	/Col>
-				</Row>
+				<div>
+				<Container fluid>
+					<Row className="header">
+							<Col xs={5} sm={4} md={3} lg={2} xl={2}>
+								<div  >
+								<img className="imground" style={{width:"100%",}} title="27TEKMASTERS" src={image}></img>
+								</div>
+							</Col>			
+					</Row>
+				</Container>
 				</div>
 
 

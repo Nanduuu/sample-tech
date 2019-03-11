@@ -101,7 +101,7 @@ constructor(props){
 
 	
   	callApi = async ( packet ) => {
-    const response = await fetch('/email/',packet);
+    const response = await fetch('/api/email/',packet);
     const body = await response.json();
 
     if (response.status !== 200) throw Error(body.message);
@@ -124,38 +124,37 @@ render(){
 
 
 	return(
-			<div style={{margin:"5px", fontSize:"20px", color:"white"}}>
+			<div style={{margin:"5px", fontSize:"20px", color:"black",textAlign:"center"}}>
 			{this.redirect()}
-			<h2 style={{color:"white"}}>Please enter the details</h2>
 			<form onSubmit = {this.handleSubmit}>
 					<Row >
-					<Col span={6} style={style}><lable > Name </lable></Col>
-					<Col span={12}><Input onChange={this.nameChange} name="Name" required/></Col>
+					<Col span={10} style={style}><lable > Name </lable></Col>
+					<Col span={14}><Input onChange={this.nameChange} name="Name" required/></Col>
 					</Row>
 
 					<Row >
-					<Col span={6} style={style}><lable> Technology </lable></Col>
-					<Col span={12}><Input  onChange={this.technologyChange} required/></Col>
+					<Col span={10} style={style}><lable> Technology </lable></Col>
+					<Col span={14}><Input  onChange={this.technologyChange} required/></Col>
 					</Row>
 
 					<Row >
-					<Col span={6} style={style}><lable> Email </lable></Col>
-					<Col span={12}><Input type="email" onChange={this.emailChange} required/></Col>
+					<Col span={10} style={style}><lable> Email </lable></Col>
+					<Col span={14}><Input type="email" onChange={this.emailChange} required/></Col>
 					</Row>
 
 					<Row>
-					<Col span={6}  style={style}><lable> Breif about requirement </lable></Col>
-					<Col span={12}><textarea style={{width:'100%',height:'50%',color:"black"}} onChange={this.breifChange} required/></Col>
+					<Col span={10}  style={style}><lable> Breif about requirement </lable></Col>
+					<Col span={14}><textarea style={{width:'100%',height:'50%',color:"black"}} onChange={this.breifChange} required/></Col>
 					</Row>
 
 					<Row >
-					<Col span={6} style={style} ><lable> Date on required </lable></Col>
-					<Col span={12}><DatePicker disabledDate={this.disabledDate} onChange={this.dateChange} style={{width:"100%"}} required/></Col>
+					<Col span={10} style={style} ><lable> Date on required </lable></Col>
+					<Col span={14}><DatePicker disabledDate={this.disabledDate} onChange={this.dateChange} style={{width:"100%"}} required/></Col>
 					</Row>
 
 					<Row >
-					<Col span={6}style={style}><lable> Time Zone </lable></Col>
-					<Col span={12} style={{background:"white"}}>
+					<Col span={10}style={style}><lable> Time Zone </lable></Col>
+					<Col span={14} style={{background:"white"}}>
 						<lable style={{color:"black"}}><Input type="radio" onChange={this.timeChange} name="timezone" value="EST" checked/>*EST</lable>
 						<lable style={{color:"black"}}><Input type="radio" onChange={this.timeChange} name="timezone" value="PST"/>*PST</lable>
 						<lable style={{color:"black"}}><Input type="radio" onChange={this.timeChange} name="timezone" value="IST"/>*IST</lable>
@@ -169,15 +168,11 @@ render(){
 						
 						</Col>
 
-						<Col span={12}>
-						<Col span={12}>
+						<Col>
+						
 						<Input type="submit"/> 
-						</Col>
-						<Col span={12}>
-						<Link to='/'><Button type="danger" style={{width:'100%'}}>Cancel</Button></Link>
-						</Col>
 						
-						
+												
 						</Col>
 					</Row>
 

@@ -13,18 +13,16 @@ const  cstyle = {
   
 }
 
-
-
-
 class Why27k extends React.Component{
 
 
 	render(){
 		return(
-			<div>
-              <h1 style={{color:"white",marginTop:"50px"}}> Why 27 technologies??</h1>
+			<div style={{textAlign:"center"}}>
+              
              <Row>
              	<Col xl={24} sm={24} md={24}>
+                  <h1 style={{color:"white",marginTop:"50px"}}> Why 27 technologies??</h1>
                		<img style={{width:"100%"}} src={image}></img> 
                </Col> 
              </Row>      

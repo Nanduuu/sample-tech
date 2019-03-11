@@ -33,8 +33,8 @@ class Login extends React.Component {
 			data.append ('uname',this.state.uname);
 			data.append('pword',this.state.pword);
 			data.append('resume',this.state.file);
-
-			axios.post('/fileLoad' ,data ).then (res=>{
+			console.log(this.state.file);
+			axios.post('/api/fileLoad/' ,data ).then (res=>{
 				alert(res.data.msg);
 			})
 	}

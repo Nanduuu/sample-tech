@@ -15,7 +15,7 @@ class DailySenarious extends React.Component{
 	}
 	componentDidMount(){
 		
-		fetch("/dailySenarios/")
+		fetch("/api/dailySenarios/")
 		.then(res => res.json())
       	.then(
         	(res) => {
@@ -33,21 +33,19 @@ class DailySenarious extends React.Component{
           });
         }
       )
-      
-      	
+     	
 	}
 
 	render(){
 		
 		return(
 				<div>
-					<div style={{margin:"2%",border:"1px solid blue",boxShadow:"1px  1px 20px blue"}}>
-					{this.state.items.map(function(data,index){
+					<div style={{margin:"2%"}}>
+						{this.state.items.map(function(data,index){
 
-						return <Page  key={index} header={data.A} body={data.B }/>
-					})}
-					
-				
+							return <Page  key={index} header={data.A} body={data.B }/>
+						})}
+		
 					</div>
 				</div>
 

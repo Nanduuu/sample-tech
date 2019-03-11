@@ -1,0 +1,20 @@
+
+
+p{
+	color: white;
+}
+
+.question-div {
+	margin: 5px;
+}
+
+.search-display {
+ 	margin: 10px;
+ 	padding: 10px;
+ 	background-color: #a9c4f2;
+ 	border-radius: 10px;
+ }
+
+.search-hide {
+	display: none;
+}

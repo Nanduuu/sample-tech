@@ -89,7 +89,7 @@ class Frame extends React.Component{
       
      
           <Row>
-					<Layout style={{background :"#8080ff"}}>
+					<Layout>
           <Row>
             <Col style={{boxShadow:"2px 0px 2px black"}} lg={24} sm={24} md={24}>
   					    				   
@@ -101,7 +101,7 @@ class Frame extends React.Component{
                 defaultSelectedKeys={['1']}
                 style={{ background:"white", lineHeight: '50px' ,color : "block" }}
               >
-              <Menu.Item key="1" style={{ fontSize:"20px",width:"25%",overflow:"hidden" ,textOverflow: 'ellipsis'}}>
+              <Menu.Item key="1" style={{ fontSize:"20px",width:"20%",overflow:"hidden" ,textOverflow: 'ellipsis'}}>
                   <Media query="(min-width: 720px)">
                     {matches =>
                       matches ? (
@@ -115,7 +115,7 @@ class Frame extends React.Component{
                 <Link to = {"/"} ></Link>
                 </Menu.Item>
                      
-              <Menu.Item key="2" style={{ fontSize:"20px",width:"25%",overflow:"hidden" ,textOverflow: 'ellipsis'}} >
+              <Menu.Item key="2" style={{ fontSize:"20px",width:"20%",overflow:"hidden" ,textOverflow: 'ellipsis'}} >
                   <Media query="(min-width: 720px)">
                     {matches =>
                       matches ? (
@@ -130,7 +130,7 @@ class Frame extends React.Component{
               </Menu.Item>
               
               
-              <Menu.Item key="3" style={{ fontSize:"20px",width:"25%",overflow:"hidden" ,textOverflow: 'ellipsis'}}>
+              <Menu.Item key="3" style={{ fontSize:"20px",width:"20%",overflow:"hidden" ,textOverflow: 'ellipsis'}}>
 
                 <Media query="(min-width: 720px)">
                     {matches =>
@@ -144,7 +144,21 @@ class Frame extends React.Component{
                 <Link to = {"/Testimonials"} ></Link>
                 </Menu.Item>
 
-              <Menu.Item key="4" style={{ fontSize:"20px",width:"25%",overflow:"hidden" ,textOverflow: 'ellipsis'}}>
+                <Menu.Item key="4" style={{ fontSize:"20px",width:"20%",overflow:"hidden" ,textOverflow: 'ellipsis'}}>
+
+                <Media query="(min-width: 720px)">
+                    {matches =>
+                      matches ? (
+                      <span><Icon type="database" theme="outlined" />DailySenarios </span>
+                      ) : (
+                      <Icon type="database" theme="outlined" />
+                      )
+                    }
+                    </Media>
+                <Link to ={"/DailySenarios"}></Link>
+                </Menu.Item>
+
+              <Menu.Item key="5" style={{ fontSize:"20px",width:"20%",overflow:"hidden" ,textOverflow: 'ellipsis'}}>
                     <Media query="(min-width: 720px)">
                     {matches =>
                       matches ? (
@@ -165,30 +179,10 @@ class Frame extends React.Component{
             </Row>
     				
       			
-              <div style={{borderWidth:"0px 0px 2px 0px" , borderStyle:"solid"}}>
-              <Row style={{marginTop:"10px"}}>
-              <Col md={24} lg={24} sm={24} >
-              
-              <Row >
-                <Col xl={12} lg={12} sm={12} xs={12}>
-                  <Link to = {"/Optcpt"}>  <Button  type="primary" size='large' style={{ background:"#011456", width :"100%",margin: "0px"}}> CPT/OPT  FAQ </Button></Link>
-                  </Col>
-                  <Col xl={12} lg={12} sm={12} xs={12}>
-                  <Link to ={"/DailySenarios"}><Button type="primary" size='large' style={{ background:"#011456", width :"100%",margin: "0px"}}>Daily Scenarios</Button></Link>                  </Col>
-              </Row>
-
-              <Row>
-                  
-              </Row>
-              
-
-              </Col>
-              </Row>
-              </div>
                
              <Row >
               <Content>
-              <Col md={24} lg={24} sm={24} >
+              <Col md={24} lg={24} sm={24} style={{padding:"0px",backgroundColor:"#001628"}} >
                   
                     <Switch>
                       <Route exact path= {"/"} component={Home}/>                                                           
@@ -208,22 +202,7 @@ class Frame extends React.Component{
               
 
     				
-    				<Footer theme="light" style={{background:"#011456",textAlign: 'center' ,width:'100%' ,boxShadow:"2px 2px 10px black ", bottom:'0px'}}>
-      						  <Col span={24}>
-                    <Popover
-                        content={<a onClick={this.hide}>Close</a>}
-                        title="Need your role and responsibilities to help you !! Please do Whatsapp for Quick response - +91 8977888954"
-                        trigger="click"
-                        visible={this.state.visible}
-                        onVisibleChange={this.handleVisibleChange}
-                      >
-                        <Button class = "primary"><Icon type="tablet" ></Icon></Button>
-                      </Popover>
-                      <a href="https://facebook.com/techmaster.s.5" target="_blank"><Button><Icon type="facebook" theme="outlined" /></Button></a>
-                      <a href="https://linkedin.com/in/27tekmasters" target="_blank"><Button><Icon type="linkedin" theme="outlined" /></Button></a>
-                      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=27tekmasters@gmail.com&su=SUBJECT&body=BODY" target="_blank"><Button><Icon type="google" theme="outlined" /></Button></a>
-                      </Col>
-    				</Footer>
+    				
   					</Layout>
           </Row>
 

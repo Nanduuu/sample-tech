@@ -94,7 +94,7 @@ class Submit extends React.Component{
 
 	
   	callApi = async ( packet ) => {
-    const response = await fetch('/email/',packet);
+    const response = await fetch('http://13.232.123.34/api/v1/email/',packet);
     const body = await response.json();
 
     if (response.status !== 200) throw Error(body.message);
