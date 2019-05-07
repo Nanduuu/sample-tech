@@ -86,14 +86,12 @@ class Frame extends React.Component{
 	render(){
 			return(
 				<div style={fontStyle}>
-      
-     
+  
           <Row>
 					<Layout>
           <Row>
             <Col style={{boxShadow:"2px 0px 2px black"}} lg={24} sm={24} md={24}>
-  					    				   
-   				   
+ 
               <Row>
               <Menu
                 theme="light"
@@ -198,22 +196,10 @@ class Frame extends React.Component{
               </Col>
               </Content>
               </Row>
-            
-              
-
-    				
-    				
-  					</Layout>
+            </Layout>
           </Row>
-
 				</div>
-
-
-
 				);
-
-
-
 	}
 
 

@@ -170,7 +170,7 @@ class Submit extends React.Component{
              					 
 						    </Row>
 						    <div>
-						    <Button type="submit" style={{margin:"10px"}} onClick = {this.handleSubmit} type="primary">Submit </Button>
+						    <Button type="submit" style={{ margin:"10px",color:"black"}} onClick = {this.handleSubmit} value = "Submit" type="primary" /> 
 						    
 						    </div>
 			        </Form>

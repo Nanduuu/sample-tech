@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card } from 'antd';
 import {Row , Col } from 'antd';
+import './Testimonials.css';
 
 
 class Testimonials extends React.Component {
@@ -15,7 +16,7 @@ class Testimonials extends React.Component {
         <div style={{ padding: '30px'  }}>
         <Row gutter={24}>
           <Col lg={8} md={12} sm={24}>
-            <Card title=" - Mehak Nair" bordered={true} headStyle={{fontSize:"30px"}}>
+            <Card title=" - Mehak Nair" bordered={true}>
            <p >The staff was amazing they have been extremely professional and helpful through out my job. </p>
           <p> My organization hired me for Cyberark Technology. Due to budget issues they moved me to Beyond trust tool. </p>
           <p>When i explained the issue to 27 tech masters team. They changed the support person who are good in Cyberark and Beyond Trust.</p>

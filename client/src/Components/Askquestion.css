@@ -1,7 +1,9 @@
 
 
-p{
+p {
+	font-color: white;
 	color: white;
+
 }
 
 .question-div {
@@ -18,3 +20,30 @@ p{
 .search-hide {
 	display: none;
 }
+
+
+.askButton {
+
+	background-color: gray;
+	color: black;
+	width: 50%;
+	border-width: 1px;
+	overflow-x: hidden;
+	display: inline;
+	border-radius: 5px;
+	text-decoration: none;
+	border-color: none;
+
+}
+
+.askButton:hover {
+
+	background-color: white;
+	font-weight: bold;
+	color:black;
+}
+
+.askButton:focus {
+	outline:0;
+}
+

@@ -1,7 +1,20 @@
+p {
+	font-color: white;
+}
+
+
 .mega:hover {
   background-color: #f7f8f9;
   cursor: pointer;
   color: black;
+
+}
+
+.mega {
+  background-color: grey;
+  cursor: pointer;
+  color: white;
+  
 }
 
 .flex-container {
@@ -20,6 +33,8 @@
 
 }
 
+
+
 .flex-element-input1 {
 	flex: 3;
 	
@@ -33,6 +48,14 @@
 .flex-element1 {
 	flex: 1;
 	background-color: #001628;
+	padding: 20px;
+}
+
+.flex-element3 {
+	flex: 1;
+	background-color: #001628;
+	padding: 20px;
+	display: none;
 }
 
 .flex-element2 {
@@ -51,11 +74,22 @@
 	margin: auto;
 }
 
+.hide-menu {
+
+	display: none;
+	width: 25%;
+	
+
+}
 
 @media only screen and (max-width: 600px) {
 	.flex-element1{
 		display: none;
 		
+	}
+
+	.hide-menu{
+		display: block;
 	}	
 
 }

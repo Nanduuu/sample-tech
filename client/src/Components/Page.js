@@ -20,9 +20,9 @@ class Page extends React.Component{
 						<Card hoverable="true" 
 						    title={this.props.header}
 						    style={{ width: "100%"}}
-						    headStyle={{fontSize:"50px"}}
+						    headStyle={{fontSize:"20px"}}
 						  >
-						  <p> {this.props.body}</p>
+						  <p style={{color:"black"}}> {this.props.body}</p>
 
 						  </Card>
 						  

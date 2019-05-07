@@ -10,6 +10,8 @@ import { Input, Button} from 'antd';
 import { Modal,Popover } from 'antd';
 import SubmitForm from './SubmitForm';
 import Sider from './Sider'
+import HideSider from './HideSider'
+
 import Askquestion from './Askquestion';
 import Displayqa from './Displayqa';
 
@@ -20,9 +22,9 @@ const { Header, Content, Footer } = Layout;
 class Home extends React.Component{
     constructor(props){
         super(props);
-        this.state = { 
-            visible: false
-        }
+          this.state = { 
+              visible: false
+          }
     }
 
     showModal = () => {
@@ -47,7 +49,7 @@ class Home extends React.Component{
 
 	render(){
 		return(
-					<div>                             
+					          <div>                             
                              <div className="submit" style={{textAlign:"center",color:"white"}}>
                              <Row >
                              	<Col onClick={this.showModal} className="mega" xl={12} sm={12} md={12} style={{padding:"10px"}} >
@@ -57,9 +59,9 @@ class Home extends React.Component{
                                 </Col>
                              	<Col onClick={this.showModal} className="mega" xl={12} sm={12} md={12} style={{padding:"10px"}} >
                                   Are you looking for Job Support ?
-								</Col>
+								              </Col>
 
-							 </Row>
+							     </Row>
                              </div>
 
                              <Modal
@@ -71,28 +73,28 @@ class Home extends React.Component{
                                   closable={false}
                                 >
 
-                                <SubmitForm/>
+                                <SubmitForm />
 
                               </Modal>
+                                 <div className="hide-menu">
 
-                            
+                                   <HideSider/>
+
+                                 </div>
                                 
                                  <div className="flex-container">
-                                 <div className="flex-element1">
-                                     
-                                     <Sider/>
-                                 
-                                 </div>
+                                       <div className="flex-element1">
+                                           
+                                           <Sider/>
+                                       
+                                       </div>
 
-                                 <div className="flex-element2">
-                                        
-                                    <Askquestion/>
-                                     
-                                    <Displayqa/>
-                                        
-                                      
-                                 
-                                 </div>
+
+
+                                       <div className="flex-element2">
+                                           <Askquestion/>
+                                           <Displayqa/>
+                                       </div>
 
                              </div>
                       </div>

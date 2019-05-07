@@ -12,11 +12,12 @@ const TextArea = Input.TextArea;
 
 const CommentList = ({actions, comments }) => (
   <List
-  	actions={actions}
-    dataSource={comments}
+  	dataSource={comments}
     header={`${comments.length} ${comments.length > 1 ? 'replies' : 'reply'}`}
     itemLayout="horizontal"
-    renderItem={props => <Comment  actions={actions} {...props} />}
+    renderItem={ (props) =>{
+	console.log (props)
+		return (<Comment  actions={actions} {...props} />)} }
   />
 );
 
@@ -45,7 +46,17 @@ class Dispalyqa extends React.Component{
 	constructor(props){
 		super(props);
 		this.state={
-			comments: [],
+			comments: [{
+            author: 'Han Solo',
+            avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+            content: <p>{"Cyber Arc"}</p>,
+            datetime: moment().fromNow(),
+          },{
+            author: 'Han Solo',
+            avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+            content: <p>{"Trending technology"}</p>,
+            datetime: moment().fromNow(),
+          },],
 		    submitting: false,
 		    value: '',
 		    likes: 0,
